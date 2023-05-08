@@ -12,9 +12,9 @@ function Vaccines() {
   useEffect(() => {
     const collectionRef = collection(database, "vaccines");
     const q = query(collectionRef, orderBy("name"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+    const unsubscribe = onSnapshot(q, (snapshot) => {
       setVaccines(
-        querySnapshot.docs.map((doc) => ({
+        snapshot.docs.map((doc) => ({
           id: doc.id,
           duration: doc.data().duration,
           effects: doc.data().effects,
