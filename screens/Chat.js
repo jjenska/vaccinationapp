@@ -31,7 +31,7 @@ function Chat() {
         }))
       );
     });
-    return () => unsubscribe();
+    return unsubscribe;
   }, []);
 
   const handleSend = useCallback((messages = []) => {
