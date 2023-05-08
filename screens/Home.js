@@ -10,16 +10,10 @@ function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.textbox}>
-        <Text style={styles.text}>Welcome to shotCheck</Text>
-        <Text style={styles.text}>{user?.displayName}</Text>
-        <Text style={styles.text}>{user?.email}</Text>
+        <Text style={styles.text}>Username: {user?.displayName}</Text>
+        <Text style={styles.text}>Email: {user?.email}</Text>
       </View>
-      <View style={styles.textbox}>
-        <Text style={styles.text}>
-          In shotCheck you can find information about vaccines and chat with
-          other users.
-        </Text>
-      </View>
+
       <View style={styles.buttonContainer}>
         <Button
           textColor={COLORS.primary}
@@ -52,6 +46,7 @@ const styles = StyleSheet.create({
     borderBottomEndRadius: 6,
     borderTopEndRadius: 6,
     borderTopStartRadius: 6,
+    padding: 5,
   },
   text: {
     color: COLORS.primary,
