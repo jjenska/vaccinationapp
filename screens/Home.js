@@ -15,7 +15,10 @@ function Home() {
         <Text style={styles.text}>{user?.email}</Text>
       </View>
       <View style={styles.textbox}>
-        <Text style={styles.text}>Tähän jotain </Text>
+        <Text style={styles.text}>
+          In shotCheck you can find information about vaccines and chat with
+          other users.
+        </Text>
       </View>
       <View style={styles.buttonContainer}>
         <Button
