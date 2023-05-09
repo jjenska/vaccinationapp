@@ -21,7 +21,10 @@ function SignUp() {
   const [errorMsg, setErrorMsg] = useState("");
   const navigation = useNavigation();
 
-  // handling firebase auth errors
+  /*
+  Handling firebase auth errors, all codes found at: 
+  https://firebase.google.com/docs/reference/js/auth#autherrorcodes 
+  */
   const authCodeToMsg = (authCode) => {
     switch (authCode) {
       case "auth/invalid-email":
@@ -48,7 +51,6 @@ function SignUp() {
       .then((userCredentials) => {
         const user = userCredentials._tokenResponse.email;
         const uid = auth.currentUser.uid;
-        // creating & adding a registered user to collection "users"
         setDoc(doc(database, "users", `${uid}`), {
           email: user,
           username: value.username,
@@ -124,21 +126,23 @@ export default SignUp;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: COLORS.white,
     flex: 1,
     alignItems: "center",
   },
   logo: {
     height: 230,
     width: 200,
-    marginLeft: 60,
+    marginLeft: 50,
   },
   error: {
     color: COLORS.primary,
+    fontWeight: "bold",
   },
   input: {
     width: 350,
     marginTop: 10,
+    backgroundColor: COLORS.white,
   },
 
   buttonContainer: {

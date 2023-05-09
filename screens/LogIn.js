@@ -14,7 +14,10 @@ function LogIn() {
   const [errorMsg, setErrorMsg] = useState("");
   const navigation = useNavigation();
 
-  // handling firebase auth errors
+  /*
+  Handling firebase auth errors, all codes found at: 
+  https://firebase.google.com/docs/reference/js/auth#autherrorcodes 
+  */
   const authCodeToMsg = (authCode) => {
     switch (authCode) {
       case "auth/invalid-email":
@@ -48,14 +51,12 @@ function LogIn() {
           value={value.email}
           onChangeText={(text) => setValue({ ...value, email: text })}
           mode="outlined"
-          placeholder="Enter your email"
         />
         <TextInput
           label="Password"
           value={value.password}
           onChangeText={(text) => setValue({ ...value, password: text })}
           mode="outlined"
-          placeholder="Enter your password"
           secureTextEntry={true}
         />
       </View>
@@ -85,18 +86,19 @@ export default LogIn;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: COLORS.white,
     flex: 1,
     alignItems: "center",
   },
   logo: {
     height: 230,
     width: 200,
-    marginRight: 10,
-    marginTop: 50,
+    marginRight: 20,
+    marginTop: 60,
   },
   error: {
     color: COLORS.primary,
+    fontWeight: "bold",
   },
   input: {
     width: 350,
