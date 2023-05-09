@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.primary,
+    fontWeight: "bold",
   },
   buttonContainer: {
     marginTop: 20,

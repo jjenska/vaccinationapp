@@ -57,6 +57,8 @@ function Chat() {
       }}
       messagesContainerStyle={{ backgroundColor: COLORS.lightSpearmint }}
       renderUsernameOnMessage={true}
+      // code used for styling message bubbles:
+      // https://stackoverflow.com/questions/47056889/react-native-how-to-change-bubble-style
       renderBubble={(props) => {
         return (
           <Bubble
