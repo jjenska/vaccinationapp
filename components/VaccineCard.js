@@ -54,14 +54,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     backgroundColor: COLORS.white,
   },
-  duration: {},
-  effects: {},
-  manufacturer: {},
-  vaccName: {},
   purpose: {
     fontWeight: "bold",
     color: COLORS.spearmint,
   },
-  storage: {},
-  usage: {},
 });
