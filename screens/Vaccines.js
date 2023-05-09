@@ -44,18 +44,11 @@ export default Vaccines;
 const styles = StyleSheet.create({
   vaccineContainer: {
     flex: 1,
-
     backgroundColor: COLORS.lightSpearmint,
   },
-  duration: {},
-  effects: {},
-  manufacturer: {},
-  vaccName: {},
   purpose: {
     fontStyle: "italic",
   },
-  storage: {},
-  usage: {},
   title: {
     fontStyle: "italic",
   },
